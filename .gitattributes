@@ -1,6 +1,0 @@
-# Enforce Unix newlines
-* text=auto eol=lf
-
-# Ignore docs and tests when language scanning
-docs/* linguist-vendored
-test/* linguist-vendored

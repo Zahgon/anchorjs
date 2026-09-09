@@ -1,5 +1,19 @@
-/* eslint-env jasmine, node */
+/* eslint-env jasmine, browser */
 /* global anchors, AnchorJS */
+
+//
+// Behavioral test suite for the Go/WebAssembly migration of AnchorJS.
+//
+// These are the ORIGINAL AnchorJS specs (test/spec/AnchorSpec.js from the
+// upstream JavaScript project) preserved verbatim. They are the migration's
+// behavioral contract: they run against the SAME browser/DOM boundary as the
+// original, but the implementation under test is now the Go code compiled to
+// WebAssembly (dist/anchorjs.wasm), which installs the global `AnchorJS`
+// constructor and default `anchors` instance exactly like the original UMD
+// browser-globals branch did.
+//
+// The number of specs here (39) must never drop below the original 39.
+//
 
 'use strict';
 
